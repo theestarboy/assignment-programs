@@ -4,6 +4,7 @@ int main(){
     int fineRate=0,fineAmount=0;
 
     //user input for book details
+    
     printf("Enter the bookID:");
     scanf("%d",&bookID);
     printf("Enter the due date(in days):");
@@ -11,10 +12,12 @@ int main(){
     printf("Enter the return date (in days):");
     scanf("%d",&returnDate);
 
-    //calculate days overdue
+    //calculation for the days overdue
+    
     daysOverdue=returnDate-dueDate;
 
-    //determine the fine rate based on the number of overdue days
+    //determining the fine rate based on the number of overdue days
+    
     if (daysOverdue<=7){
             fineRate=20;
     }else if (daysOverdue<=14){
@@ -22,9 +25,10 @@ int main(){
     }else if (daysOverdue>14){
         fineRate=100;
     }
-    //calculate the total fine amount
+    //calculation for the total fine amount
+    
     fineAmount=daysOverdue*fineRate;
-    //display the results
+    
     printf("\nBookID:%d\n",bookID);
     printf("Due Date:%d\n",dueDate);
     printf("ReturnDate:%d\n",returnDate);
