@@ -16,7 +16,6 @@ while (countdown > 0) {
   else if(j!=1){
       printf("program stopped");
   }
-
-  return 0;
+return 0;
 
 }
